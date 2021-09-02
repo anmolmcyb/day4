@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <script>
+            let arr = []
+            function usePush(){
+                for(let i = 0; i < 20; i++){
+                    arr.push(`${i}`)
+                }
+            }
+            function usePop(){
+                let count = arr.length
+                for(let i = 0; i < count; i++){
+                    console.log(arr.pop())
+                }
+            }
+            usePush()
+            usePop()
+            function useUnshift(){
+                for(let i = 0; i < 20; i++){
+                    arr.unshift(`${i}`)
+                }
+            }
+            function useShift(){
+                let count = arr.length
+                for(let i = 0; i < count; i++){
+                    console.log(arr.shift())
+                }
+            }
+            useUnshift()
+            useShift()
+            usePush()
+            console.log(arr.splice(2, 10))
+            console.log(arr.map(i=>+i*+i))
+            console.log(arr.filter(i=>i%2 == 0))
+            console.log(arr.reduce((i, j)=>+i+(+j)))
+            // let arr2 = arr.map(i=>(+i)*(+i))
+        </script>
+    </head>
+</html>

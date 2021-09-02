@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <script>
+            function add(x,y){
+                return x+y
+            }
+            const sub = (x, y) => x - y
+            const mul = function(x, y){return x * y}
+            function getx(){
+                return +document.getElementById('x').value
+            }
+            function gety(){
+                return +document.getElementById('y').value
+
+            }
+            function addxy(){
+                document.getElementById('op').innerText = add(getx(), gety())
+            }
+            function subxy() {
+                document.getElementById('op').innerText = sub(getx(), gety())
+            }
+            function mulxy(){
+                document.getElementById('op').innerText = mul(getx(), gety())
+
+            }
+            function divxy(){
+                document.getElementById('op').innerText = function(x,y){
+                    return x/y
+                }(getx(), gety())
+            }
+            function mod(x, y){
+                return x()%y()
+            }
+            function modxy() {
+                document.getElementById('op').innerText = mod(getx, gety)
+            }
+        </script>
+    </head>
+    <body>
+        
+        <input type="number" name="x" id="x">
+        <input type="number" name="y" id="y">
+        <br>
+        <input type="button" id="add" value="add" onclick="addxy()">
+        <input type="button" id="sub" value="substract" onclick="subxy()">
+        <input type="button" id="mul" value="multiply" onclick="mulxy()">
+        <input type="button" id="div" value="divide" onclick="divxy()">
+        <input type="button" id="mod" value="mod" onclick="modxy()">
+<br>
+<span id="op"></span>
+
+    </body>
+</html>
